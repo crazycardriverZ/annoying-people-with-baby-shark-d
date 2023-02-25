@@ -9,6 +9,7 @@ music.setTempo(85)
 State = 0
 basic.forever(function () {
     if (State == 1) {
+        basic.showString("This is Baby Shark!")
         music.playTone(587, music.beat(BeatFraction.Whole))
         music.playTone(659, music.beat(BeatFraction.Whole))
         music.playTone(784, music.beat(BeatFraction.Half))
@@ -48,6 +49,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (State == 1) {
+        basic.pause(100)
         basic.showLeds(`
             # # . . .
             . . # # .
