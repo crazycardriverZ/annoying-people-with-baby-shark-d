@@ -1,9 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     State = 1
 })
-input.onButtonPressed(Button.AB, function () {
-	
-})
 input.onButtonPressed(Button.B, function () {
     State = 0
 })
@@ -51,36 +48,34 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (State == 1) {
-        for (let index = 0; index < 99999999; index++) {
-            basic.showLeds(`
-                # # . . .
-                . . # # .
-                . . . . #
-                . . # # .
-                # # . . .
-                `)
-            basic.showLeds(`
-                . . . . .
-                # # # # .
-                . . . . #
-                # # # # .
-                . . . . .
-                `)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                # # # # #
-                . . . . .
-                . . . . .
-                `)
-            basic.showLeds(`
-                . . . . .
-                # # # # .
-                . . . . #
-                # # # # .
-                . . . . .
-                `)
-        }
+        basic.showLeds(`
+            # # . . .
+            . . # # .
+            . . . . #
+            . . # # .
+            # # . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # # # # .
+            . . . . #
+            # # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            # # # # #
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # # # # .
+            . . . . #
+            # # # # .
+            . . . . .
+            `)
     }
 })
 basic.forever(function () {
