@@ -10,6 +10,49 @@ State = 0
 basic.forever(function () {
     if (State == 1) {
         basic.showString("This is Baby Shark!")
+        State += 1
+    }
+})
+basic.forever(function () {
+    if (State == 2) {
+        basic.pause(100)
+        basic.showLeds(`
+            # # . . .
+            . . # # .
+            . . . . #
+            . . # # .
+            # # . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # # # # .
+            . . . . #
+            # # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            # # # # #
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # # # # .
+            . . . . #
+            # # # # .
+            . . . . .
+            `)
+    }
+})
+basic.forever(function () {
+    if (State == 0) {
+        basic.showIcon(IconNames.EigthNote)
+    }
+})
+basic.forever(function () {
+    if (State == 2) {
         music.playTone(587, music.beat(BeatFraction.Whole))
         music.playTone(659, music.beat(BeatFraction.Whole))
         music.playTone(784, music.beat(BeatFraction.Half))
@@ -45,43 +88,5 @@ basic.forever(function () {
         music.playTone(740, music.beat(BeatFraction.Whole))
         basic.pause(500)
         music.changeTempoBy(22)
-    }
-})
-basic.forever(function () {
-    if (State == 1) {
-        basic.pause(100)
-        basic.showLeds(`
-            # # . . .
-            . . # # .
-            . . . . #
-            . . # # .
-            # # . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            # # # # .
-            . . . . #
-            # # # # .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            # # # # #
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            # # # # .
-            . . . . #
-            # # # # .
-            . . . . .
-            `)
-    }
-})
-basic.forever(function () {
-    if (State == 0) {
-        basic.showString("Baby Shark!")
     }
 })
